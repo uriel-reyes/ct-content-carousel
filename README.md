@@ -1,6 +1,6 @@
 # Content Carousel Component
 
-The Content Carousel is a versatile component that displays a series of slides, allowing users to cycle through them manually using navigation arrows or dots or automatically at a set interval. It supports image slides as well as YouTube video slides.
+The Content Carousel is a versatile component for commercetools Frontend that displays a series of slides, allowing users to cycle through them manually using navigation arrows or dots or automatically at a set interval. It supports image slides as well as YouTube video slides.
 
 ## Features
 
@@ -11,7 +11,9 @@ The Content Carousel is a versatile component that displays a series of slides, 
 
 ## Installation
 
-(Include any installation steps or scripts here if necessary.)
+1. Upload Schema.json into Studio
+2. Add content-carousel to your project folder
+3. Make the appropriate references in the main `index.ts` file in `frontend/frontastic`
 
 ## Usage
 
