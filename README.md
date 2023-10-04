@@ -1,6 +1,3 @@
-# ct-content-carousel
----
-
 # Content Carousel Component
 
 The Content Carousel is a versatile component that displays a series of slides, allowing users to cycle through them manually using navigation arrows or dots or automatically at a set interval. It supports image slides as well as YouTube video slides.
