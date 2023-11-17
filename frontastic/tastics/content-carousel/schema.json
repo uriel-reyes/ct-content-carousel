@@ -1,0 +1,111 @@
+{
+    "name": "Content Carousel",
+    "category": "Content",
+    "icon": "apps",
+    "schema": [
+        {
+            "name": "Slides",
+            "fields": [
+                {
+                    "label": "Slide",
+                    "field": "slides",
+                    "type": "group",
+                    "min": 1,
+                    "max": 5,
+                    "fields": [
+                        {
+                            "label": "Slide Type",
+                            "field": "slideType",
+                            "type": "enum",
+                            "values": [
+                                {
+                                    "value": "image",
+                                    "name": "Image"
+                                },
+                                {
+                                    "value": "youtube",
+                                    "name": "YouTube Video"
+                                }
+                            ],
+                            "required": true
+                        },
+                        {
+                            "label": "Image",
+                            "field": "image",
+                            "type": "media",
+                            "conditional": {
+                                "field": "slideType",
+                                "value": "image"
+                            }
+                        },
+                        {
+                            "label": "YouTube Link",
+                            "field": "youtubeLink",
+                            "type": "reference",
+                            "conditional": {
+                                "field": "slideType",
+                                "value": "youtube"
+                            }
+                        },
+                        {
+                            "label": "Slide Text",
+                            "field": "summary",
+                            "type": "string"
+                        },
+                        {
+                            "label": "Button label",
+                            "field": "ctaLabel",
+                            "translatable": true,
+                            "type": "string",
+                            "required": false,
+                            "default": ""
+                        },
+                        {
+                            "label": "Link",
+                            "field": "ctaReference",
+                            "translatable": false,
+                            "required": false,
+                            "type": "reference",
+                            "default": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Settings",
+            "fields": [
+                {
+                    "label": "Enable Slider",
+                    "field": "enableSlideInterval",
+                    "type": "boolean",
+                    "default": true
+                },
+                {
+                    "label": "Slide Interval",
+                    "field": "interval",
+                    "type": "number",
+                    "default": 5000,
+                    "description": "Time in milliseconds between each slide",
+                    "condition": {
+                        "field": "enableSlideInterval",
+                        "value": true
+                    }
+                },
+                {
+                    "label": "Display Arrows",
+                    "field": "showArrows",
+                    "type": "boolean",
+                    "default": true
+                },
+                {
+                    "label": "Display Dots",
+                    "field": "showDots",
+                    "type": "boolean",
+                    "default": true
+                }
+            ]
+        }
+    ],
+    "tasticType": "content-carousel"
+}
