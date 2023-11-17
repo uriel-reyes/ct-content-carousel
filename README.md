@@ -12,7 +12,7 @@ The Content Carousel is a versatile component for commercetools Frontend that di
 ## Installation
 
 1. Upload Schema.json into Studio
-2. Add content-carousel to your project folder
+2. Add files to your project folder
 3. Make the appropriate references in the main `index.ts` file in `frontend/frontastic`
 
 ## Usage
